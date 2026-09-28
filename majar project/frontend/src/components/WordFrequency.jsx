@@ -1,0 +1,1 @@
+export default function WordFrequency({ words = [] }) { return <div className="chart"><h3>Common review language</h3><div className="words">{words.map(item => <span key={item.word} style={{ fontSize: `${14 + item.count}px` }}>{item.word} <b>{item.count}</b></span>)}</div></div> }

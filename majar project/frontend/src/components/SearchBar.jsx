@@ -1,0 +1,2 @@
+import { useState } from 'react'
+export default function SearchBar({ onSearch, compact = false }) { const [value, setValue] = useState('iPhone 15'); return <form className={`search ${compact ? 'compact' : ''}`} onSubmit={e => { e.preventDefault(); onSearch(value) }}><input value={value} onChange={e => setValue(e.target.value)} placeholder="Search a product, e.g. iPhone 15" /><button>Analyze review data →</button></form> }

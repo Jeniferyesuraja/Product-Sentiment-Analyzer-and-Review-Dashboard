@@ -1,0 +1,2 @@
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts'
+export default function RatingChart({ data }) { const items = Object.entries(data).map(([rating, count]) => ({ rating: `${rating}★`, count })); return <div className="chart"><h3>Rating distribution</h3><ResponsiveContainer width="100%" height={220}><BarChart data={items}><XAxis dataKey="rating" /><YAxis allowDecimals={false} /><Tooltip /><Bar dataKey="count" fill="#5498e8" radius={[5, 5, 0, 0]} /></BarChart></ResponsiveContainer></div> }
